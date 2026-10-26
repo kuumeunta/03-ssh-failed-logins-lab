@@ -8,7 +8,21 @@ Finding attempts
 - VM2: Ubuntu 26.04, Hostname: UbuntuSub, username: subvm, IP 192.168.56.102
 - Network: Host-Only
 
-##
+## Failing password entry
+Firstly checking up for ssh stable work
+
+![sshsubcheck](screenshots/sshsubcheck.png)
+```
+sudo ufw verbose
+sudo systemctl status ssh
+systemctl status ssh.socket
+```
+From mainvm looking up for how established connection looks like
+
+![conest](screenshots/sshconnected.png)
+```
+ssh sbvm@192.168.56.102
+```
 ##
 ##
 
