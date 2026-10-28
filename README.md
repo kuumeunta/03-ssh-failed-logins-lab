@@ -56,8 +56,15 @@ sudo fail2ban-client status sshd
 ```
 
 Now we see mainvm's IP-adress `192.168.56.101`as banned and 5 `Total failed`
-##
-##
+
+## Unbannig ip
+Unbannig mainvm's IP-address and verifying it's no loner in banned list
+
+![unbanned](screenshots/unbanned.png)
+```
+sudo fail2ban-client set sshd unbanip 192.168.56.101
+sudo fail2ban-client status sshd
+```
 
 ## Problems and conclusions
 Problems:
