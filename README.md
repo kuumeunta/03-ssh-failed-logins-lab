@@ -26,13 +26,36 @@ ssh sbvm@192.168.56.102
 Now attempting to login with wrong password
 
 ![failingpass](screenshots/wrongpasswdcheck.png)
+
 And looking into new logs on subvm
 
 ![failedlog](screenshots/failedloginlog.png)
 ```
 sudo journalctl -u ssh --since "30 min ago" | grep -a "Failed"
 ```
+Those error log lines shows what actually is failed with logging in and which place user was trying to log in to. also IP-address, port, type of connection.
 
+## fail2ban installation and usage
+Firstly, installing service and verifying it works properly
+
+![f2binst](screenshots/f2binstalled.png)
+```
+sudo apt install fail2ban
+sudo systemctl enable --now fail2ban
+sudo fail2ban-client status sshd
+```
+Then failed login tries again
+
+![failedlogin](screenshots/ffailedlogin.png)
+
+And re-checking the log 
+
+![bannedip](screenshots/f2bcheck.png)
+```
+sudo fail2ban-client status sshd
+```
+
+Now we see mainvm's IP-adress `192.168.56.101`as banned and 5 `Total failed`
 ##
 ##
 
