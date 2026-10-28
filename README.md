@@ -46,7 +46,7 @@ sudo fail2ban-client status sshd
 ```
 Then failed login tries again
 
-![failedlogin](screenshots/ffailedlogin.png)
+![failedlogin](screenshots/failedlogin.png)
 
 And re-checking the log 
 
