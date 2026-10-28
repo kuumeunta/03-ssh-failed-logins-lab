@@ -23,6 +23,16 @@ From mainvm looking up for how established connection looks like
 ```
 ssh sbvm@192.168.56.102
 ```
+Now attempting to login with wrong password
+
+![failingpass](screenshots/wrongpasswordcheck.png)
+And looking into new logs on subvm
+
+![failedlog](screenshots/failedloginlog.png)
+```
+sudo journalctl -u ssh --since "30 min ago" | grep -a "Failed"
+```
+
 ##
 ##
 
