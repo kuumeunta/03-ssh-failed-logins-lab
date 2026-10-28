@@ -25,7 +25,7 @@ ssh sbvm@192.168.56.102
 ```
 Now attempting to login with wrong password
 
-![failingpass](screenshots/wrongpasswordcheck.png)
+![failingpass](screenshots/wrongpasswdcheck.png)
 And looking into new logs on subvm
 
 ![failedlog](screenshots/failedloginlog.png)
